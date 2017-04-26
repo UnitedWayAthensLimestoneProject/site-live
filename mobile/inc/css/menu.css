@@ -1,0 +1,165 @@
+
+body
+{
+	height: 100%;
+	width: 98%;
+	max-height: 800px;
+	background-color: #0a0d4c;
+	display: table;
+	margin: 10px 0 0 0;
+}
+
+a, input, textarea, button, submit {
+	max-width: 80%;
+}
+
+/* Main menu */
+
+#main
+{
+	display: none;
+	width: 100%;
+	color: #FFFFFF;
+	height: 80vh;
+	max-width: 1000px;
+}
+
+#main span
+{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#menu
+{
+	width: 100%;
+	bottom: 0;
+	position: fixed;
+	text-align:center;
+	/*display: table;*/
+	display: none;
+}
+
+#menu ul
+{
+	margin: 0;
+	padding: 10px 0;
+	list-style: none;  
+	text-align: center;
+	background: #FFFFFF; /*#CE5B09;*/
+}
+
+#menu ul li
+{
+	float: left;
+	width: 25%;
+	padding: 0 0px 5px;
+	position: relative;
+	line-height: 0;
+	display: inline;
+}
+
+#menu ul a 
+{
+	float: left;
+	height: 55px;
+	padding: 0 25px;
+	color: #0a0d4c;
+	text-transform: uppercase;
+	font: 8px/18px Arial, Helvetica;
+	text-decoration: none;
+	text-shadow: 0 1px 0 #000;
+}
+
+#menu ul li:hover > a
+{
+	color: #fafafa;
+}
+
+*html #menu ul li a:hover /* IE6 */
+{
+	color: #fafafa;
+}
+
+#menu ul li:hover > ul
+{
+	display: block;
+}
+
+
+/* Clear floated elements */
+#menu ul:after 
+{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+* html #menu ul             { zoom: 1; } /* IE6 */
+*:last-child+html #menu ul { zoom: 1; } /* IE7 */
+
+.button {
+display: inline-block;
+max-width: 80%;
+background: #000000;
+padding: 5px;
+text-align: center;
+border-radius: 15px;
+color: #FFFFFF;
+font-weight: bold;
+border: #FFFFFF;
+border-width: 2px;
+border-style: solid;
+text-decoration: none;
+}
+
+.button:hover{
+background: #4D4D4D;
+color: white;
+}
+
+#full_menu
+{
+	width: 100%;
+	bottom: 0;
+	position: fixed;
+	text-align:center;
+	display: none;
+	transition: top 3000ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+	border-top: grey solid 10px;
+
+}
+
+#full_menu ul
+{
+	margin: 0;
+	padding: 10px 0;
+	list-style: none;  
+	text-align: center;
+	background: #FFFFFF; /*#CE5B09;*/
+	height: 50vh;
+}
+
+#full_menu ul li
+{
+	float: left;
+	padding: 0 0px 5px;
+	position: relative;
+	line-height: 0;
+	display: inline;
+}
+
+#full_menu ul a 
+{
+	float: left;
+	height: 55px;
+	padding: 5px 15px;
+	color: #0a0d4c;
+	text-transform: uppercase;
+	font: 8px/18px Arial, Helvetica;
+	text-decoration: none;
+	text-shadow: 0 1px 0 #000;
+}

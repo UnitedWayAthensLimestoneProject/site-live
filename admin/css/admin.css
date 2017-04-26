@@ -1,0 +1,104 @@
+.editvoltable thead th
+{
+	margin:5px;
+	padding:5px;
+	border:2px solid #000000;
+	text-align:center;
+	font-family: Arial, Helvetica, sans-serif;
+	outline: thin solid;
+	background-color:#BFFFFF;
+	font-size: small;
+}
+.editvoltable tr:nth-child(odd)
+{ 
+	background-color:#BFDFFF;
+}
+.editvoltable tr:nth-child(even)
+{ 
+	background-color:#99B2FF;
+}
+.editvoltable tr:hover
+{
+	background-color: #FFFF4C;
+	outline: #FF0000;
+	cursor: pointer;
+}
+.editvoltable tr:active
+{
+	background-color: #73FF73;
+	outline: #FF0000 solid;
+	cursor: progress;
+}
+
+.editvoltable td
+{
+	margin:0px;
+	padding:3px;
+	border:0px solid #000000;
+	text-align:center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+}
+.editvoltable
+{
+	margin:0px;
+	padding:0px;
+	width: auto;
+	border:0px solid #000000;
+	text-align:center;
+	page-break-inside:auto;
+	display:inline-block;
+}
+
+.editgrptable thead th
+{
+	margin:5px;
+	padding:5px;
+	border:2px solid #000000;
+	text-align:center;
+	font-family: Arial, Helvetica, sans-serif;
+	outline: thin solid;
+	background-color:#BFFFFF;
+	font-size: small;
+}
+.editgrptable tr:nth-child(odd)
+{ 
+	background-color:#BFDFFF;
+}
+.editgrptable tr:nth-child(even)
+{ 
+	background-color:#99B2FF;
+}
+.editgrptable tr:hover
+{
+	background-color: #FFFF4C;
+	outline: #FF0000;
+	cursor: pointer;
+}
+.editgrptable tr:active
+{
+	background-color: #73FF73;
+	outline: #FF0000 solid;
+	cursor: progress;
+}
+
+.editgrptable td
+{
+	margin:0px;
+	padding:10px;
+	border:0px solid #000000;
+	text-align:center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+}
+.editgrptable
+{
+	margin:0px;
+	padding:0px;
+	width: auto;
+	border:0px solid #000000;
+	text-align:center;
+	page-break-inside:auto;
+	display:inline-block;
+}
+

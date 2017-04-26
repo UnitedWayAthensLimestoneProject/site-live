@@ -1,0 +1,407 @@
+/* CSS Style Sheet for unitedwayathenslimestone.com */
+
+/* banner at top of page */
+#banner 
+{
+	background-color: #0a0d4c;
+    width: 950px;
+	height: auto;
+    overflow: auto;
+    margin: 0 auto;
+}
+
+/* dark blue frame around content */
+#darkframe
+{
+    width: 900px;
+	height: auto;
+	margin: 0 auto;
+	padding: 0;
+	border-color:#0a0d4c;
+	border-style:solid;
+    border-width:25px;
+}
+
+/* menu bar with page links */
+#menu 
+{
+	width: 900px;
+	height: 25px;
+	margin: 0 auto;
+	padding: 0;
+	border-color:#1b277e;
+	border-style:solid;
+    border-width:1px;
+	background: #1b277e;
+}
+
+/* list of menu page links */
+#menu ul 
+{
+	margin: 0;
+	padding: 0px 0px 0px 1px;
+	list-style: none;
+	line-height: normal;
+    background: #1b277e;
+}
+
+/* list elements for menu of page links */
+#menu li 
+{
+	float: left;
+}
+
+/* list links for menu of page links */
+#menu a 
+{
+	display: block;
+	margin-right: -1px;
+	height: 12px;
+    background: url(http://i.imgur.com/9FIduyd.png) #1b277e bottom left repeat-x;
+	padding: 2px 13.5px 12px 13.5px;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 19px;
+	font-weight: bold;
+	color: #ffffff;
+	border: none;
+    border-left: 1px solid #1b277e;
+    border-right: 1px solid #1b277e;
+}
+
+/* list links for menu of page links - hover-over */
+#menu a:hover 
+{
+	text-decoration: underline;
+}
+
+/* list links for menu of page links - selected */
+#menu a.selected
+{
+	padding: 2px 13.5px 12px 13.5px;
+    background-repeat:no-repeat;
+    background: #313c8a;
+}
+
+/* Donate page link in menu bar */
+#menu a.donate
+{
+	color: #ffffff;
+    background: url(http://i.imgur.com/L9AnWfC.png) #f58320 bottom left repeat-x;
+}
+
+/* content wrapper 1 */
+#wrapper 
+{
+    width: auto;
+	height: auto;
+    overflow: auto;
+    margin: 0 auto;
+}
+
+/* content wrapper 2 */
+#wrapper2 
+{
+    width: auto;
+	height: auto;
+    overflow: auto;
+    margin: 0 auto;
+}
+
+/* social media sidebar */
+#social 
+{
+    margin: 0 auto;
+    font-family: Arial;
+    float: right; 
+}
+
+/* spacer */	
+.spacer
+{
+	margin: 0;
+    font-family: Arial;
+    float: right; 
+}
+
+/* spacer for sidebar */	
+.heightThirteen
+{
+	height:13em;
+}
+
+/* sidebar Quote divider */	
+#sideQuote
+{
+	border-top:solid;
+	border-bottom:solid;
+	border-color:#0a0d4c;
+	border-width:5px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #52525B;
+    float: right; 
+}
+
+/* left sidebar divider */		
+div.sidebarLeft
+{
+	margin: 0;
+	float: right;
+	min-width:1em;
+	border-right-color:#0a0d4c;
+	border-right-style:solid;
+	border-width:10px;
+}
+
+/* sidebar divider */	
+div.sidebar
+{
+	float:right;
+	width:20%;
+	height:100%;
+}
+
+#slideshow img 
+{ 
+	display: none 
+}
+
+#slideshow img.first 
+{ 
+	display: block 
+}
+
+
+/* main content divider */		
+div.main
+{
+	float:left;
+	width:75%;
+	height:100%;
+}
+
+/* main content styling */
+#content 
+{
+    width: 645px;
+	margin: 0 auto;
+    font-family: Arial;
+    float: left;
+	padding: 0 0 0 10px; 
+}
+
+/* main content paragraph style */
+#content p
+{
+    padding: 0px 0px 0px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #52525B;
+}
+
+/* main content title styling*/
+#content p.title
+{
+    padding: 0px 0px 0px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	color: #f57814;
+}
+
+/* center text */
+.center
+{
+	text-align:center;	
+}
+
+/* left-justify text */
+.left
+{
+	text-align:left;
+}
+
+/* right-justify text */
+.right
+{
+	text-align:right;
+}
+
+/* center text or object */			
+#center
+{
+	width:100%;
+	text-align: center;
+	display: inline-block;
+} 
+
+/* right-justify */
+#right
+{
+    float: right;
+	width: 310px;
+}
+
+/* left-justify */	
+#left
+{
+    float: left;
+	width: 310px;
+}
+
+/* title setting */
+#title
+{
+    padding: 15px 0px 0px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	color: #f57814;
+}
+
+
+/* Header 1 setting */
+h1
+{
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	color: #f57814;
+}
+
+/* Header 2 setting */
+h2
+{
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #f57814;
+}
+
+/* unordered list styling*/
+ul
+{   
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #52525B;
+}
+
+/* list content styling*/
+li {
+  color: #f57814;
+}
+
+/* list content styling - span */
+li span {
+  color: #52525B;
+}
+
+/* image setting */
+img 
+{
+  margin: 0px 20px 0px 20px;
+  background-color: #FFF;
+}
+
+/* image right-justify */
+img.float-right 
+{
+  margin: 5px 0px 5px 15px;  
+}
+
+/* image left-justify */
+img.float-left 
+{
+  margin: 5px 15px 5px 0px;
+}
+
+/* content button for Partners page */	
+#content button
+{
+		width: 300px;
+		height: 90px;
+		margin-top:7px;
+		margin-bottom:7px;
+		margin-right:10px;
+		margin-left:10px;
+		background: #000033;
+		background-image: -webkit-linear-gradient(top, #000033, #333366);
+		background-image: -moz-linear-gradient(top, #000033, #333366);
+		background-image: -ms-linear-gradient(top, #000033, #333366);
+		background-image: -o-linear-gradient(top, #000033, #333366);
+		background-image: linear-gradient(to bottom, #000033, #333366);
+		-webkit-border-radius: 60;
+		-moz-border-radius: 60;
+		border-radius: 60px;
+		font-family: Arial;
+		color: #ffffff;
+		font-size: 12px;
+		padding: 10px 20px 10px 20px;
+		text-decoration: none;
+}
+		
+/* content button for Partners page - hover-over */			
+#content button:hover
+{
+		  background: #333366;
+		  background-image: -webkit-linear-gradient(top, #000033, #333366);
+		  background-image: -moz-linear-gradient(top, #000033, #333366);
+		  background-image: -ms-linear-gradient(top, #000033, #333366);
+		  background-image: -o-linear-gradient(top, #000033, #333366);
+		  background-image: linear-gradient(to bottom, #000033, #333366);
+		  text-decoration: none;
+}
+
+/* content button for Partners page - image adjustment*/	
+#content img.half 
+{ 
+	height:50%;
+	width:50%
+}	
+		
+/* horizontal bar (row) */
+hr 
+{
+ 	border: 0;
+  	width: 100%;
+  	color: #0a0d4c;
+	background-color: #0a0d4c;
+	height: 5px;
+}
+
+/* footer */
+#footer 
+{
+	clear: both;
+	margin: 0; padding: 12px 0 0 0;
+	font: normal .70em/1.5em 'Trebuchet MS', Tahoma, Arial, sans-serif;
+	height: 130px;
+	color: #666666;
+	text-align: center;
+}
+
+/* footer paragraph*/
+#footer p 
+{
+	margin: 0; padding: 0;
+}
+
+/* footer links*/
+#footer a 
+{
+	text-decoration: none;
+	color: #0048E0;
+	padding-left: 20px;
+}
+
+/* footer hover-over*/
+#footer a:hover 
+{
+	text-decoration: underline;
+	color: #000000;
+}

@@ -1,0 +1,1177 @@
+/* css reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end of css reset */
+
+
+body {
+	margin: 15px 5px;
+	padding: 0;
+	background: #e6e6e6;
+}
+
+#wrapper {
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+  	border-right: 2px solid #0a0d4c;
+  	border-left: 2px solid #0a0d4c;
+  	background: #FFFFFF;
+  	
+  	/***  CSS Rounded Corners  ***/
+	border-top-left-radius:20px;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-right-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-radius-topright:20px;
+	border-bottom-left-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+}
+
+#adminWrapper {
+	width: 800px;
+  	background: #0a0d4c;
+	background-image: url(../images/bg_column.jpg);
+  	background-repeat: repeat-y;
+  	background-position: left top;
+  	
+  	/***  CSS Rounded Corners  ***/
+	border-bottom-left-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+}
+
+div.banner{
+	background-color: #0a0d4c;
+    margin: 0 auto;
+	padding-top:3px;
+	padding-bottom:5px;
+	width:100%; 
+	font-family:"Lucida Grande";
+	font-size:18px;
+	letter-spacing:5px;
+	color:white;
+  
+  	/***  CSS Rounded Corners  ***/
+	border-top-left-radius:20px;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-right-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-radius-topright:20px;
+}
+
+div.PrintOnly {
+	display: none;
+}
+
+div.logout {
+	float: right;
+	margin-top: 20px;
+	margin-right: 20px;
+	clear: both;
+}
+
+div.footer {
+	margin:0px;
+	padding-top:3px;
+	padding-bottom:5px;
+	width:100%;
+	font-family:"Lucida Grande";
+	font-size:16px;
+	letter-spacing:2px;
+	background-color: #0a0d4c;
+	color:white;
+	text-align: center;
+	clear: both;
+  
+  	/***  CSS Rounded Corners  ***/
+	border-bottom-left-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+}
+
+div.leftright{
+	height:50px;
+	margin:0px;
+	padding-right:15px;
+	padding-left:15px;
+	padding-top:24px;
+	text-align:center;
+	color:white;
+	background-color:rgb(205, 205, 205);
+	font-family:"Lucida Grande";
+	letter-spacing:2px;
+	outline:1px solid #FFFFFF;
+}
+
+#parentDiv {
+	position:static;
+	margin:0px;
+	padding:0px;
+	background-color: #FFFFFF;
+	color: #000;
+	min-height: 550px;
+}
+
+#menu {
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0;
+	background: #000;
+	text-align: center;
+}
+
+#mainNav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden; 
+	zoom: 1;
+	background-color: #0a0d4c;
+}
+
+#mainNav li {
+    float: left;
+    width: 20%;
+    clear:none;
+}
+
+
+#mainNav a {
+	color: #000;
+	display: block;
+	background-color: #E7E7E7;
+	zoom: 1;
+	
+	/***  CSS Box Model  ***/
+	padding:7px 5px;
+  
+	/***  CSS Borders  ***/
+	border:1px solid rgb(192, 192, 192);
+	border-top:1px solid rgb(192, 192, 192);
+	border-bottom:1px solid rgb(192, 192, 192);
+	border-left:1px solid rgb(192, 192, 192);
+	border-right:1px solid rgb(192, 192, 192);
+
+	/***  CSS Text and Font  ***/
+	font-size: 11px;
+	text-align:center;
+	text-transform: uppercase;
+	text-decoration: none;
+	
+	/***  CSS Rounded Corners  ***/
+	border-top-left-radius:10px;
+	-webkit-border-top-left-radius:10px;
+	-moz-border-radius-topleft:10px;
+	border-top-right-radius:10px;
+	-webkit-border-top-right-radius:10px;
+	-moz-border-radius-topright:10px;
+}
+
+#mainNav a:hover {
+	font-weight: bold;
+	background-color: #f9b479;
+}
+
+#addvol #addVolLink,
+#viewvol #viewVolLink,
+#findvol #findVolLink,
+#agencyopp #agencyOppLink,
+#searchAll #searchAllLink,
+#admin #adminLink,
+#adminAgencies #adminLink,
+#adminOpportunities #adminLink,
+#adminSkills #adminLink,
+#adminUsers #adminLink,
+#adminVols #adminLink,
+#adminReviews #adminLink,
+#adminReviewsOpps #adminLink
+{
+	background-color: #FFFFFF;
+	font-weight: bold;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+#adminMenuSidebar {
+	float: left;
+	margin: 5px 0 0 0;
+	width: 125px;
+	display: inline;
+}
+
+* html #adminMenuSidebar {
+	display: inline;
+}
+
+#adminNav {
+	list-style: none;
+	padding: 0;
+	margin: 0 4px;
+	width: 115px;
+	border-bottom: 1px solid #0a0d4c;
+	zoom: 1;
+}
+
+#adminNav a {
+	color: #000;
+	display: block;
+	height: 2.5em;
+	line-height: 2.5em;
+	background-color: #E7E7E7;
+	
+	/***  CSS Borders  ***/
+	border: 1px solid #999;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	border-collapse: collapse;
+	border-bottom: none;
+
+	/***  CSS Text and Font  ***/
+	
+	font-size: 11px;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+#adminNav a:hover {
+	font-weight: bold;
+	background-color: #f9b479;
+}
+
+#adminAgencies #adminAgenciesLink,
+#adminOpportunities #adminOpportunitiesLink,
+#adminSkills #adminSkillsLink,
+#adminUsers #adminUsersLink,
+#adminVols #adminVolsLink,
+#adminReviews #adminReviewsNoLink
+#adminReviewsOpps #adminReviewOppsNoLink
+{
+	background-color: #FFFFFF;
+	font-weight: bold;
+}
+
+#adminNav #adminReviewOppsYesLink,
+#adminNav #adminReviewsYesLink {
+	background-color: #f58320;
+	color: #FFFFFF;
+}
+
+#adminReviewOpps #adminReviewOppsYesLink,
+#adminReviews #adminReviewsYesLink
+{
+	background-color: #FFFFFF;
+	font-weight: bold;
+	color: #f58320;
+}
+
+
+#form_container
+{
+	background:#fff;
+	text-align:left;
+	width: 775px;
+	margin-right: auto;
+	margin-left: auto;
+	min-height: 600px; 	
+}
+
+#admin_form_container
+{
+	background: #fff;
+	float: left;
+	text-align: left;
+	width: 670px;
+	margin-right: auto;
+	min-height: 600px; 	
+}
+
+form.appnitro
+{
+	margin:20px 20px 0;
+	padding:0 0 20px;
+}
+
+/**** Form Section ****/
+.appnitro
+{
+	font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size:small;
+}
+
+.appnitro li
+{
+	width:95%;
+}
+
+form ol
+{
+	list-style: lower-alpha;
+}
+
+form ul
+{
+	font-size:100%;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+
+form li
+{
+	display:block;
+	margin:0;
+	padding:4px 5px 2px 9px;
+	position:relative;
+}
+
+form li:after
+{
+	clear:both;
+	content:".";
+	display:block;
+	height:0;
+	visibility:hidden;
+}
+
+.buttons:after
+{
+	clear:both;
+	content:".";
+	display:block;
+	height:0;
+	visibility:hidden;
+}
+
+.buttons
+{
+	clear:both;
+	display:block;
+	margin-top:10px;
+	text-align:center;
+}
+
+* html form li
+{
+	height:1%;
+}
+
+* html .buttons
+{
+	height:1%;
+}
+
+* html form li div
+{
+	display:inline-block;
+}
+
+form li div
+{
+	color:#444;
+	margin:0 4px 0 0;
+	padding:0 0 8px;
+}
+
+form li span
+{
+	color:#444;
+	float:left;
+	margin:0 4px 0 0;
+	padding:0 0 8px;
+}
+
+form li div.left
+{
+	display:inline;
+	float:left;
+	width:48%;
+}
+
+form li div.right
+{
+	display:inline;
+	float:right;
+	width:48%;
+}
+
+form li div.left .medium
+{
+	width:95%;
+}
+
+form li div.right .medium
+{
+	width:95%;
+}
+
+.clear
+{
+	clear:both;
+}
+
+form li div label
+{
+	clear:both;
+	color:#444;
+	display:block;
+	font-size:9px;
+	line-height:9px;
+	margin:0;
+	padding-top:3px;
+}
+
+form li span label
+{
+	clear:both;
+	color:#444;
+	display:block;
+	font-size:9px;
+	line-height:9px;
+	margin:0;
+	padding-top:3px;
+}
+
+form li .datepicker
+{
+	cursor:pointer !important;
+	float:left;
+	height:16px;
+	margin:.1em 5px 0 0;
+	padding:0;
+	width:16px;
+}
+
+.form_description
+{
+	border-bottom:1px dotted #000;
+	clear:both;
+	display:inline-block;
+	margin:0 0 1em;
+}
+
+.form_description[class]
+{
+	display:block;
+}
+
+.form_description h2
+{
+	clear:left;
+	font-size:160%;
+	font-weight:400;
+	margin:0 0 3px;
+}
+
+.form_description p
+{
+	font-size:95%;
+	line-height:130%;
+	margin:0 0 12px;
+}
+
+form hr
+{
+	display:none;
+}
+
+form li.section_break
+{
+	border-top:1px dotted #000;
+	margin-top:9px;
+	padding-bottom:0;
+	padding-left:9px;
+	padding-top:13px;
+	width:97% !important;
+}
+
+form ul li.first
+{
+	border-top:none !important;
+	margin-top:0 !important;
+	padding-top:0 !important;
+}
+
+form .section_break h3
+{
+	font-size:125%;
+	font-weight:bold;
+	line-height:130%;
+	margin:0 0 2px;
+}
+
+form .section_break p
+{
+	font-size:85%;
+	margin:0 0 10px;
+}
+
+form fieldset label {
+  display: block;
+  float: left;
+  padding: 0 10px;
+  margin: 5px 0 0;
+  width: 75px;
+  text-align: right;
+}
+
+/**** Buttons ****/
+input.button_text
+{
+	overflow:visible;
+	padding:0 7px;
+	width:auto;
+}
+
+.buttons input
+{
+	font-size:120%;
+	margin-right:5px;
+}
+
+/**** Inputs and Labels ****/
+label.description
+{
+  text-align:left;
+	border:none;
+	color:#222;
+	display:block;
+	font-size:95%;
+	font-weight:700;
+	line-height:150%;
+	padding:0 0 1px;
+}
+
+span.symbol
+{
+	font-size:115%;
+	line-height:130%;
+}
+
+input.text
+{
+	background:#fff url(../images/shadow.gif) repeat-x top;
+	border-bottom:1px solid #ddd;
+	border-left:1px solid #c3c3c3;
+	border-right:1px solid #c3c3c3;
+	border-top:1px solid #7c7c7c;
+	color:#333;
+	font-size:100%;
+	margin:0;
+	padding:2px 0;
+}
+
+input.text_phone
+{
+	background:#fff url(../images/shadow.gif) repeat-x top;
+	border-bottom:1px solid #ddd;
+	border-left:1px solid #c3c3c3;
+	border-right:1px solid #c3c3c3;
+	border-top:1px solid #7c7c7c;
+	color:#333;
+	font-size:100%;
+	margin:0;
+	padding:2px 0;
+}
+
+input.text_phone_invalid
+{
+	background-color: #ffa9b8;
+	border: 1px red solid;
+}
+
+input.center_text
+{
+	background:#fff url(../images/shadow.gif) repeat-x top;
+	border-bottom:1px solid #ddd;
+	border-left:1px solid #c3c3c3;
+	border-right:1px solid #c3c3c3;
+	border-top:1px solid #7c7c7c;
+	color:#333;
+	font-size:100%;
+	margin:0;
+	padding:2px 0;
+	text-align: center;
+}
+
+input.view_vol
+{
+	border-bottom:1px solid #ddd;
+	border-left:0;
+	border-right:0;
+	border-top:0;
+	color:#333;
+	font-size:100%;
+	margin:0;
+	padding:2px 0;
+}
+
+input.file
+{
+	color:#333;
+	font-size:100%;
+	margin:0;
+	padding:2px 0;
+}
+
+textarea.textarea
+{
+	background:#fff url(../images/shadow.gif) repeat-x top;
+	border-bottom:1px solid #ddd;
+	border-left:1px solid #c3c3c3;
+	border-right:1px solid #c3c3c3;
+	border-top:1px solid #7c7c7c;
+	color:#333;
+	font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size:100%;
+	margin:0;
+	width:99%;
+}
+
+select.select
+{
+	color:#333;
+	font-size:100%;
+	margin:1px 0;
+	padding:1px 0 0;
+	background:#fff url(../images/shadow.gif) repeat-x top;
+	border-bottom:1px solid #ddd;
+	border-left:1px solid #c3c3c3;
+	border-right:1px solid #c3c3c3;
+	border-top:1px solid #7c7c7c;
+}
+
+input.currency
+{
+	text-align:right;
+}
+
+input.checkbox
+{
+	display:block;
+	height:13px;
+	line-height:1.4em;
+	margin:3px 0 0;
+	width:13px;
+}
+
+input.radio
+{
+	display:block;
+	height:13px;
+	line-height:1.4em;
+	margin:5px 0 0 3px;
+	width:13px;
+}
+
+label.choice
+{
+  text-align:left;
+	color:#444;
+	display:block;
+	font-size:100%;
+	line-height:1.4em;
+	margin:-1.45em 0 0 18px;
+	width:90%;
+}
+
+select.select[class]
+{
+	margin:0;
+	padding:1px 0;
+}
+
+*:first-child+html select.select[class]
+{
+	margin:1px 0;
+}
+
+.safari select.select
+{
+	font-size:120% !important;
+	margin-bottom:1px;
+}
+
+label.print_line {
+	margin-left: 25px;
+	display: inline;
+	width: 250px;
+	text-align: right;
+}
+
+input.print_line {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid #000;
+}
+
+input.small
+{
+	width:25%;
+}
+
+select.small
+{
+	width:25%;
+}
+
+input.medium
+{
+	width:50%;
+}
+
+select.medium
+{
+	width:50%;
+}
+
+input.large
+{
+	width:98%;
+}
+
+select.large
+{
+	width:100%;
+}
+
+textarea.small
+{
+	height:5.5em;
+}
+
+textarea.medium
+{
+	height:10em;
+}
+
+textarea.large
+{
+	height:20em;
+}
+
+#messages {
+  left: 33px;
+  position: relative;
+  top: 25px;
+  width: 698px;
+}
+
+#messages div {
+  border: 2px solid;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 0.7em;
+  font-style: italic;
+  min-height: 16px;
+  padding: 5px 28px;
+  position: relative;
+  text-align: center;
+}
+
+#messages p {
+  margin: 0;
+}
+
+#messages div.success {
+  background: #E6EFC2;
+  border-color: #C6D880;
+  color: #264409;
+}
+
+#messages div.error {
+  background: #FBE3E4;
+  border-color: #FBC2C4;
+  color: #8A1F11;
+}
+
+/**** Errors ****/
+label.error {
+	font-size: 0.8em;
+	color: #F00;
+	font-weight: bold;
+	display: block;
+}
+
+input.error, select.error, textarea.error {
+	background: #FFA9B8;
+	border: 1px red solid;
+}
+
+p.error_message
+{
+	text-indent: 3em;
+}
+
+span.error_message
+{
+	font-style:italic;
+}
+
+#error_message
+{
+	background:#fff;
+	border:1px dotted red;
+	margin-bottom:1em;
+	padding-left:0;
+	padding-right:0;
+	padding-top:4px;
+	text-align:center;
+	width:99%;
+}
+
+#error_message_title
+{
+	color:#DF0000;
+	font-size:125%;
+	margin:7px 0 5px;
+	padding:0;
+}
+
+#error_message_desc
+{
+	color:#000;
+	font-size:100%;
+	margin:0 0 .8em;
+}
+
+#error_message_desc strong
+{
+	background-color:#FFDFDF;
+	color:red;
+	padding:2px 3px;
+}
+
+.center {
+  text-align: center;
+}
+
+form li.error
+{
+	background-color:#FFDFDF !important;
+	border-bottom:1px solid #EACBCC;
+	border-right:1px solid #EACBCC;
+	margin:3px 0;
+}
+
+form li.error label
+{
+	color:#DF0000 !important;
+}
+
+form p.error
+{
+	clear:both;
+	color:red;
+	font-size:10px;
+	font-weight:700;
+	margin:0 0 5px;
+}
+
+form .required
+{
+	float:none;
+	font-weight:700;
+}
+
+
+/**** Guidelines and Error Highlight ****/
+form li.highlighted
+{
+	background-color:#fff7c0;
+}
+
+form .guidelines
+{
+	background:#f5f5f5;
+	border:1px solid #e6e6e6;
+	color:#444;
+	font-size:80%;
+	left:100%;
+	line-height:130%;
+	margin:0 0 0 8px;
+	padding:8px 10px 9px;
+	position:absolute;
+	top:0;
+	visibility:hidden;
+	width:42%;
+	z-index:1000;
+}
+
+form .guidelines small
+{
+	font-size:105%;
+}
+
+form li.highlighted .guidelines
+{
+	visibility:visible;
+}
+
+form li:hover .guidelines
+{
+	visibility:visible;
+}
+
+.no_guidelines .guidelines
+{
+	display:none !important;
+}
+
+.no_guidelines form li
+{
+	width:97%;
+}
+
+.no_guidelines li.section
+{
+	padding-left:9px;
+}
+
+/*** Success Message ****/
+.form_success 
+{
+	clear: both;
+	margin: 0;
+	padding: 90px 0pt 100px;
+	text-align: center
+}
+
+.form_success h2 {
+    clear:left;
+    font-size:160%;
+    font-weight:normal;
+    margin:0pt 0pt 3px;
+}
+
+fieldset {
+	border-color: #000;
+	border-width: 1px;
+	border-style: solid;
+	padding: 10px;
+	margin: 25px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+fieldset br {
+  clear: left;
+}
+
+/*** Password ****/
+
+.password label{
+   display:block;
+   font-size:120% !important;
+   padding-top:10px;
+   font-weight:bold;
+}
+
+.password-meter {
+	float: right;
+}
+
+#li_captcha{
+   padding-left: 5px;
+}
+
+#li_captcha span{
+	float:none;
+}
+
+/* used for scrolling */
+.scrollit {
+    overflow:scroll;
+    max-height:350px;
+    width:100%;
+}
+
+label.user_form {
+	display: inline-block;
+	width: 125px;
+	text-align: right;
+}
+
+label.user_search_form {
+	display: inline-block;
+	width: 75px;
+	text-align: right;
+}
+
+label.skills_search_by {
+	display: inline-block;
+	width: 125px;
+	text-align: right;
+}
+
+label.skills_search_form {
+	display: inline-block;
+	width: 175px;
+	text-align: left;
+}
+
+table.search_results {
+	margin-top: 15px;
+	width: 750px;
+}
+
+table.search_results th {
+	border: 1px solid #000;
+	background-color: #CCC;
+	text-align: center;
+	padding: 5px;
+	min-width: 100px;
+}
+
+table.search_results td {
+	border: 1px solid #000;
+	text-align: center;
+	padding: 5px;
+}
+
+table.admin_search_results {
+	margin-top: 15px;
+	width: 650px;
+}
+
+table.admin_search_results th {
+	border: 1px solid #000;
+	background-color: #CCC;
+	text-align: center;
+	padding: 5px;
+	min-width: 100px;
+}
+
+table.admin_search_results td {
+	border: 1px solid #000;
+	text-align: center;
+	padding: 5px;
+}
+
+form label.label_right {
+	text-align: right;
+	display: inline-block;
+	width: 200px;
+	line-height: 150%;
+}
+
+form label.label_left {
+	text-align: left;
+	display: inline-block;
+	width: 200px;
+	font-weight: bold;
+	line-height: 150%;
+}
+
+table.skilltable td {
+	border: 1px solid #000;
+	padding: 15px;
+	width: 150px;
+	line-height: 150%;
+}
+
+table.editvoltable {
+	margin-top: 15px;
+	width: 650px;
+}
+
+table.editvoltable th {
+	border: 1px solid #000;
+	background-color: #CCC;
+	text-align: center;
+	padding: 0;
+	width: 75px;
+}
+
+table.editvoltable td {
+	border: 1px solid #000;
+	padding: 0;
+	width: 75px;
+	line-height: 150%;
+	font-size: 14px;
+}
+
+table.editopptable {
+	margin-top: 15px;
+	width: 650px;
+}
+
+table.editopptable th {
+	border: 1px solid #000;
+	background-color: #CCC;
+	text-align: center;
+	padding: 0;
+	width: 75px;
+}
+
+table.editopptable td {
+	border: 1px solid #000;
+	padding: 0;
+	width: 75px;
+	line-height: 150%;
+	font-size: 14px;
+}
