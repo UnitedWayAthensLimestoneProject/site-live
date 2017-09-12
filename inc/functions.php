@@ -62,6 +62,7 @@ function get_main_menu()
 		  <a href="disaster_relief.php">Disaster Relief Form</a>
 		  <a href="damage_report.php">Damage Report Form</a>
 		  <a  style="background-color:#f57814" href="donate.php">DONATE</a>
+			<a href="pdfjs/web/viewer.html?file=Hurricane Relief Sheet.pdf">Hurricane Relief 2017</a>
 		</div>
 	  </li>
 	</ul>
@@ -114,7 +115,7 @@ echo '<!-- Footer with info and links -->
 			<a href="https://twitter.com/UWlimestone" target="_blank"><img src="images/twitter.gif" alt="Twitter" width="50" style="border: none;" class="img" /></a> <!-- link to Twitter page -->
 			<a href="http://www.youtube.com/watch?v=y_hEa8_mSh8" target="_blank"><img src="images/youtube.gif" alt="YouTube" width="50" style="border: none;" class="img" /></a> <!-- link to YouTube page -->
 			</p>
-		  </div> <!-- close css division "footer" -->	
+		  </div> <!-- close css division "footer" -->
 ';
 
 return;
@@ -129,7 +130,7 @@ function is_mobile()
 
 		//header('Location: /mobile');
 		header('Location: http://m.unitedwayathenslimestone.com');
-	
+
 	}
 
 }
