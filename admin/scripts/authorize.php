@@ -1,7 +1,6 @@
-<?php
-
+<?php	
 	require_once 'app_config.php';
-	require_once 'database_connection.php';
+	require_once 'database_connection.php';	
 	
 	session_start();
 	

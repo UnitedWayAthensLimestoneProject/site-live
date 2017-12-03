@@ -144,11 +144,11 @@ EOD;
 		</span>
 		<span class = "clear">
 			<label class ="description" for ="email"> Email Address</label>
-			<input name="email" id = "email" type ="email" size ="40" maxlength ="100" class ="text email" placeholder="email@address.com" />
+			<input name="email" id = "email" type ="email" size ="40" maxlength ="100" class ="text email" required placeholder="email@address.com" />
 		</span>
 		<span style ="margin-left:10px">
 			<label class="description" for="home_phone_header">Home Phone </label>
-			<input name ="home_phone" id="home_phone" size="15" maxlength="15" type ="text" class="text_phone" placeholder="###-###-####"/>
+			<input name ="home_phone" id="home_phone" size="15" maxlength="15" type ="text" class="text_phone" required placeholder="###-###-####"/>
 		</span>
 		<span style ="margin-left:10px">
 			<label class ="description" for ="cell_phone">Cell Phone </label>

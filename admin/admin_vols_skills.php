@@ -83,16 +83,17 @@ EOD;
 	page_start("United Way of Athens/Limestone County EMD Admin Page", $javascript, "searchAll",
 			   $_REQUEST['success_message'], $_REQUEST['error_message']);
 	
+	admin_menu();
 ?>
 
-		<div id="form_container">
+		<div id="admin_form_container">
 			<div id="search_by_radio_buttons" align="center" style="margin-top:25px">
 				<label class="skills_search_by">Search Skills : </label>
 				<input type="radio" name="search_by" id="search_by_skills" value="search_by_skills" title="Search by Skills List">
 				<label class="skills_search_form" style="text-align:left"> by Skills List - Volunteer</label><br>
 				<label class="skills_search_by">&nbsp;</label>
 			</div>
-			
+			<div class="adminDefaults" >
 			<form name="form_search_by_skills" id="form_search_by_skills" method="post" class="appnitro" style="margin:25px 10px" action="admin_vols_skills.php">
 				<ul><li class="section_break"></li></ul>
 				<center>
@@ -293,7 +294,7 @@ EOD;
 				?>		
 			</form>
 			</center>
-			
+			</div>
 		</div>
 		<div class="footer">
 			Designed by Athens State University

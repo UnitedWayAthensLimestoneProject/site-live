@@ -1,4 +1,4 @@
-<?php
+<?php	
 	// Set up debug mode
 	define("DEBUG_MODE", true);
 
@@ -31,14 +31,14 @@
 	function handle_error($user_error_message, $system_error_message) {
 		session_start();
 		$_SESSION['error_message'] = $user_error_message;
-		$_SESSION['system_error_message'] = $system_error_message;
-		header("Location: " . get_web_path(SITE_ROOT) . "/admin/scripts/show_error.php");
+		$_SESSION['system_error_message'] = $system_error_message;		
+		header("Location: " .get_web_path(SITE_ROOT). "/admin/scripts/show_error.php");			
 		exit();
 	}
 	
-	function get_web_path($file_system_path) {
+	function get_web_path($file_system_path) {		
 		$main_part = str_replace('/var/chroot/home/content/70/9561270/html', '', $file_system_path);
-		$full = "{$main_part}";
+		$full = "{$main_part}";				
 		return $full;
 	}
 ?>

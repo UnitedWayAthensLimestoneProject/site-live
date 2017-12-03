@@ -41,14 +41,35 @@
 			<div class="form_description" align="center">
 				<h2>United Way EMD Administration</h2>
 				<p>This is where an administrator would come to add/edit users, add/edit skills, etc.</p>
-			</div>	
-			<form id="form_admin" class="appnitro" method="post" action="">					
-				<ul>
-		 			<li>
-		 				<span>
-		 				</span>
- 					</li>
+			</div>	     
+			<form id="form_admin" class="appnitro" method="post" action="">
+        <div id="divLinks">
+        <h2 id="h2Links">Admin</h2>
+				<ul id="ulLinks">
+		 			<li id="liLinks"><a href="view_event.php">Calendar</a></li>
+          <li id="liLinks"><a href="admin_massEmail.php">Email</a></li>
+          <li id="liLinks"><a href="admin_sidebar.php">Edit Sidebar</a></li>
+          <li id="liLinks"><a href="admin_videos.php">Edit Videos</a></li>
+          <li id="liLinks"><a href="admin_skills.php">Skills</a></li>
+          <li id="liLinks"><a href="admin_users.php">Users</a></li>
+          <li id="liLinks"><a href="admin_vols_email.php">Criteria Email</a></li>
+          <li id="liLinks"><a href="admin_vols.php">Volunteers</a></li>          
+          <li id="liLinks"><a href="admin_vols_community.php">V-Community</a></li>
+          <li id="liLinks"><a href="admin_vols_disaster.php">V-Disaster</a></li>
+          <li id="liLinks"><a href="admin_vols_age.php">V-Age</a></li>
+          <li id="liLinks"><a href="admin_vols_skills.php">V-Skills</a></li>      
+          <li id="liLinks"><a href="admin_groups.php">Groups</a></li>
+          <li id="liLinks"><a href="admin_disaster.php">Disasters</a></li>
+          <li id="liLinks"><a href="admin_damage.php">Damage</a></li>
+          <li id="liLinks"><a href="admin_donation.php">Donations</a></li>
+          <li id="liLinks"><a href="admin_reviews_vols.php">New Vols</a></li>
+          <li id="liLinks"><a href="admin_reviews_groups.php">New Group</a></li>
+          <li id="liLinks"><a href="admin_reviews_opps.php">New Opps</a></li>
+          <li id="liLinks"><a href="admin_reviews_disaster.php">New Disaster</a></li>
+          <li id="liLinks"><a href="admin_reviews_damage.php">New Damage</a></li>
+          <li id="liLinks"><a href="admin_reviews_donation.php">New Donation</a></li> 
  				</ul>
+        </div>
 			</form>	
 		</div>
 		<div class="footer">

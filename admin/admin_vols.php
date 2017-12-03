@@ -30,8 +30,7 @@
 	// Authorize users to access page. Function is found in authorize.php.
 	// Current user groups are Administrators, Volunteers, and Agencies
 	// authorize_user(); will allow anyone that is logged in to access the page
-	authorize_user(array("Administrators"));
-	
+	authorize_user(array("Administrators"));	
 
 	
 	if (isset($_POST['form_id']) || isset($_GET['edit_vol'])) {
@@ -198,7 +197,6 @@ EOD;
 EOD;
 			
 		}
-
 	} else {
 		
 		$javascript = <<<EOD
@@ -228,7 +226,7 @@ EOD;
 	
 
 	$javascript .= "
-	
+	/* ASU2017 Added the w2 function for enabling double click on the grid */
 	$(function () {    
     $('#editvoltable').w2grid({ 
         name: 'grid', 
@@ -263,7 +261,10 @@ EOD;
         },
         onEdit: function (event) {
 			location.href = 'admin_vols.php?edit_vol='+event.recid;
-        },
+        }, 
+				onDblClick: function (event) {
+                        location.href = 'admin_vols.php?edit_vol='+event.recid;
+        },       
         onDelete: function (event) {
             console.log('delete has default behaviour');
         },
@@ -310,18 +311,17 @@ EOD;
 				or handle_error("an error occurred while searching for volunteers", mysql_error());
 			
 			$num_of_rows = mysql_num_rows($result);
-
 		} catch (Exception $exc) {
 			handle_error("something went wrong while attempting to search for volunteers.",
 				"Error searching for volunteers: " . $exc->getMessage());
 		}
 		
 		while ($row = mysql_fetch_array($result))
-		{
+		{      
 		/*	**ASU2016**  Added database fields for (disaster, community, date_of_birth) 	6/20/2016		*/
 			$javascript .= "{ recid: ".$row['vol_id'].", reg_date: '".date("n/j/Y",strtotime($row['reg_date']))."', first_name: '".$row['first_name']."', last_name: '".$row['last_name']."', email_address: '".$row['email_address']."', home_phone: '".$row['home_phone']."', cell_phone: '".$row['cell_phone']."', disaster: '".$row['disaster']."', community: '".$row['community']."', date_of_birth: '".date("Y-m-d",strtotime($row['date_of_birth']));
 		/* **ASU2016**  End added code 6/20/2016   */
-			
+       
 			if($row['active']==1)
 			{
 				$javascript .= "', active: 'ACTIVE', active_color: '<font color=green>ACTIVE</font>' },";
@@ -331,7 +331,6 @@ EOD;
 			$javascript .= "
 			";
 		}
-
 $javascript .= "		
         ]
     });    
@@ -340,7 +339,6 @@ $javascript .= "
 	
 	page_start("United Way of Athens/Limestone County EMD Admin Page", $javascript, "adminVols",
 			   $_REQUEST['success_message'], $_REQUEST['error_message']);
-
 	admin_menu();
 ?>
 		
@@ -437,7 +435,7 @@ $javascript .= "
 						</span>
 						<span class="clear">
 							<label class="description" for="email">Email Address</label>
-							<input name="email" id="email" type="text" size="40" maxlength="40" class="text email" value="<?php echo $vol_row['email_address']; ?>"> 
+							<input name="email" id="email" type="text" size="40" maxlength="40" class="text email required" value="<?php echo $vol_row['email_address']; ?>"> 
 						</span> 
 						<span style="margin-left:10px" id="phone">
 							<label class="description" for="home_phone_header">Home Phone </label>
@@ -451,7 +449,7 @@ $javascript .= "
 					<li>
 						<span>
 							<label class="description" for="address">Home Address</label>
-							<input name="street_address1" size="80" maxlength="30" type="text" class="text" value="<?php echo $vol_row['street_address1']; ?>">
+							<input name="street_address1" size="80" maxlength="30" type="text" class="text required" value="<?php echo $vol_row['street_address1']; ?>">
 							<label for="street_address1">Street Address (line 1)</label>
 						</span>
 						<span class="clear">
@@ -459,15 +457,15 @@ $javascript .= "
 							<label for="street_address2">Street Address (line 2)</label>
 						</span>
 						<span class="clear">
-							<input name="city" size="45" maxlength="30" type="text" value="<?php echo $vol_row['city']; ?>">
+							<input name="city" size="45" maxlength="30" type="text" required value="<?php echo $vol_row['city']; ?>">
 							<label for="city">City</label>
 						</span>
 						<span>
-							<input name="state" size="2" maxlength="2" type="text" value="AL" class="center_text" value="<?php echo $vol_row['state']; ?>">
+							<input name="state" size="2" maxlength="2" type="text" value="AL" required="true" class="center_text" value="<?php echo $vol_row['state']; ?>">
 							<label for="state">State</label>
 						</span>
 						<span>
-							<input name="zip_code" size="24" maxlength="15" type="text" class="text" value="<?php echo $vol_row['zip_code']; ?>">
+							<input name="zip_code" size="24" maxlength="15" type="text" class="text required" value="<?php echo $vol_row['zip_code']; ?>">
 							<label for="zip_code">Postal &#47; Zip Code</label>
 						</span>
 					</li>
@@ -552,12 +550,12 @@ $javascript .= "
 										<span>
 											<label class="description" for="emer_first_name">First Name</label>
 											<input name="emer_first_name" size="26" maxlength="30" 
-												type="text" value="<?php echo $vol_row['emer_con_first_name']; ?>">
+												type="text" class="text required" value="<?php echo $vol_row['emer_con_first_name']; ?>">
 										</span>
 										<span style="margin-left:5px">
 											<label class="description" for="emer_last_name">Last Name</label>
 											<input name="emer_last_name" size="26" maxlength="30" 
-												type="text" value="<?php echo $vol_row['emer_con_last_name']; ?>">
+												type="text" class="text required" value="<?php echo $vol_row['emer_con_last_name']; ?>">
 										</span>
 									</td>
 								</tr>
@@ -571,7 +569,7 @@ $javascript .= "
 										<span style="margin-left:5px">
 											<label class="description" for="emerg_phone_header">Emergency Contact Phone</label>
 											<input name="emer_phone" id="emer_phone" size="26" maxlength="15" type="text" 
-											value="<?php echo $vol_row['emer_con_phone']; ?>">	
+											class="text phone required" value="<?php echo $vol_row['emer_con_phone']; ?>">	
 										</span>
 									</td>
 								</tr>

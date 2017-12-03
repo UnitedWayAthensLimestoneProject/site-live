@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+e<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
@@ -8,13 +8,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<link rel="stylesheet" type="text/css" href="/inc/css/uw.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="/inc/css/print.css" media="print">
-	<link rel="stylesheet" type="text/css" href="/inc/js/jquery/jquery-ui/smoothness/jquery-ui-1.10.3.custom.min.css">
-	<script type="text/javascript" src="/inc/js/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="/inc/js/jquery/query-ui.min.js"></script>
-	<script type="text/javascript" src="/inc/js/jquery/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="/inc/js/jquery/jquery.maskedinput.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../inc/css/uw.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="../inc/css/print.css" media="print">
+	<link rel="stylesheet" type="text/css" href="../inc/js/jquery/jquery-ui/smoothness/jquery-ui-1.10.3.custom.min.css">
+	<script type="text/javascript" src="../inc/js/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="../inc/js/jquery/query-ui.min.js"></script>
+	<script type="text/javascript" src="../inc/js/jquery/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="../inc/js/jquery/jquery.maskedinput.min.js"></script>
 
 <script type= "text/javascript">
 		$(document).ready(function() {
@@ -85,7 +85,7 @@
 <body>
 <body>
 <div id="wrapper">
-		<div class="banner"><img src="/images/uww-logo_2013.png" alt="United Way Logo" /></div>
+		<div class="banner"><img src="../images/uww-logo_2013.png" alt="United Way Logo" /></div>
 		<div id="menu" align="center">
 			<ul id="mainNav" class="center">
 				<li>
@@ -95,7 +95,7 @@
 <div id="form_container">
 
 		<form id="donations_form" class="appnitro"  method="POST"
-			action="/inc/scripts/add_donation.php">
+			action="../inc/scripts/add_donation.php">
 
 		<div class="form_description">
 			<h2>Donation of Goods Form</h2>
@@ -124,7 +124,7 @@
 		</span>
 		<span class = "clear">
 			<label class ="description" for ="email"> Email Address</label>
-			<input name="email" id = "email" type ="email" size ="40" maxlength ="100" class ="text email" placeholder="email@address.com" />
+			<input name="email" id = "email" type ="email" size ="40" maxlength ="100" class ="text email" placeholder="email@address.com" required/>
 		</span>
 		<span style ="margin-left:10px">
 			<label class="description" for="home_phone_header">Home Phone </label>

@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Welcome - United Way of Athens/Limestone County</title>
-	<link rel="stylesheet" type="text/css" href="/inc/css/uw.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="../inc/css/uw.css" media="screen">
 
 
 	
@@ -53,7 +53,7 @@
   		</div>
   		<div id="form_container">
 		
-			<form id="form_code_of_conduct" method="Post" action="/home.php">
+			<form id="form_code_of_conduct" method="Post" action="../home.php">
 						
 				
 				<div style="text-align:center">

@@ -5,25 +5,25 @@
 
 	// request error message, null if not.
 	$error_message = $_REQUEST['error_message'];
-	
+
 	// Start session to enable user authorization and control.
 	session_start();
 
 	// set time-out period (in seconds)
 	$inactive = 600;
- 
+
 	// check to see if $_SESSION["timeout"] is set
-	if (isset($_SESSION["timeout"])) 
+	if (isset($_SESSION["timeout"]))
 	{
 		// calculate the session's "time to live"
 		$sessionTTL = time() - $_SESSION["timeout"];
-		if ($sessionTTL > $inactive) 
+		if ($sessionTTL > $inactive)
 		{
 			session_destroy();
 			header("Location: login.php");
 		}
 	}
- 
+
 	$_SESSION["timeout"] = time();
 
 	// If the user is logged in, the user_id in the session will be set
@@ -34,13 +34,14 @@
 			// Try and log the user in
 			$username = mysql_real_escape_string(trim($_REQUEST['username']));
 			$password = mysql_real_escape_string(trim($_REQUEST['password']));
-	
+
 			// Look up the user
 			$query = sprintf("SELECT user_id, username FROM users " .
 							 " WHERE username = '%s' AND " .
 							 "       password = '%s' AND " .
 							 "		 active = 1;",
-							 $username, crypt($password, $username));
+							 //$username, $password);
+							 $username, crypt($password, $username));	// change back for live deployment
 
 			$results = mysql_query($query);
 
@@ -52,7 +53,7 @@
 				$_SESSION['user_id'] = $user_id;
 				$_SESSION['username'] = $username;
 				session_regenerate_id();
-				
+
 				if (user_in_group($user_id, "Administrators")) {
 					// if user is from an Agency, send to Agency Oppurtunity page.
 					header("Location: admin.php");
@@ -65,11 +66,11 @@
 				}
 				exit();
 			} else {
-				// If user not found, issue an error 
+				// If user not found, issue an error
 				$error_message = "Your username/password combination was invalid.";
 			}
 		}
-		
+
 		// Add any page specific javascript here.
 		// Set focus in the username textbox.
 		$javascript = <<<EOD
@@ -91,8 +92,8 @@ EOD;
 ?>
 
 		<div id="form_container">
-	
-			<form id="form_login" class="appnitro" method="post" 
+
+			<form id="form_login" class="appnitro" method="post"
 				action="<?php echo $_SERVER['PHP_SELF']; ?>" >
 				<center>
 				<div class="form_description">
@@ -111,10 +112,10 @@ EOD;
 					<br>
 					<br>
 					<center>
-					<input type="submit" value="Log In" />
+					<input type="submit" id="btnAdmin" value="Log In" />
 					</center>
 				</fieldset>
-			</form>	
+			</form>
 		</div>
 		<div class="footer">
 			Designed by Athens State University

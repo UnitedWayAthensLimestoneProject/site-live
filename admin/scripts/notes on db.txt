@@ -1,0 +1,19 @@
+Dr Lewis notes:
+
+- Create a new mysql database named 'uwalc2' with password 'UW@cs452'.
+- Run the file 'createdb.sql' found in the ​'scripts' folder to create the tables in the db
+- Run the attached SQL file to insert data into the tables.
+NOTE: do not check in the attached file to github as it contains live production data.
+
+My notes:
+
+1) create a new db in phpmyadmin
+2) import the file createdb.sql - make sure to have "Enable foreign key check" unchecked
+3) Import file uwtestdb.sql (Had to remove two "unexpected characters" from the file before it would insert. Also, commentd out INSERT INTO `opportunity` section because it throws the error: Duplicate entry '1' for key primary, which causes the rest of the data to not get inserted)
+4)click on the uwalc2 database to put it in focus. Then click on the priviges tab. click 'add user account'. 
+input the following data:
+user name: uwalc2
+host name: localhost
+password: UW@cs452
+check the global privilges box, and make sure grant all privilges is checked. 
+click Go

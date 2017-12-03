@@ -16,17 +16,17 @@
 
 
 
-	<link rel="stylesheet" type="text/css" href="/inc/css/uw.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="../inc/css/uw.css" media="screen">
 
-	<link rel="stylesheet" type="text/css" href="/inc/css/print.css" media="print">
+	<link rel="stylesheet" type="text/css" href="../inc/css/print.css" media="print">
 
-	<link rel="stylesheet" type="text/css" href="/inc/js/jquery/jquery-ui/smoothness/jquery-ui-1.10.3.custom.min.css">
+	<link rel="stylesheet" type="text/css" href="../inc/js/jquery/jquery-ui/smoothness/jquery-ui-1.10.3.custom.min.css">
 
-	<script type="text/javascript" src="/inc/js/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="../inc/js/jquery/jquery.min.js"></script>
 
-	<script type="text/javascript" src="/inc/js/jquery/query-ui.min.js"></script>
+	<script type="text/javascript" src="../inc/js/jquery/query-ui.min.js"></script>
 
-	<script type="text/javascript" src="/inc/js/jquery/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="../inc/js/jquery/jquery.validate.min.js"></script>
 
 	   
 
@@ -164,7 +164,7 @@
 
 	<div id="wrapper">
 
-		<div class="banner"><img src="/images/uww-logo_2013.png" alt="United Way Logo" /></div>
+		<div class="banner"><img src="../images/uww-logo_2013.png" alt="United Way Logo" /></div>
 
 		<div id="menu" align="center">
 

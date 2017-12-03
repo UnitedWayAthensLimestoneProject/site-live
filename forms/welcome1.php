@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
 	<title>Welcome - United Way of Athens/Limestone County</title>
-	<link rel="stylesheet" type="text/css" href="/inc/css/uw.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="../inc/css/uw.css" media="screen">
 
 
 
@@ -46,7 +46,7 @@
 
 <body>
 	<div id="wrapper">
-		<div class="banner"><img src="/images/uww-logo_2013.png" alt="United Way Logo" /></div>
+		<div class="banner"><img src="../images/uww-logo_2013.png" alt="United Way Logo" /></div>
 		<div id="menu" align="center">
 			<ul id="mainNav" class="center">
 				<li>
@@ -72,7 +72,7 @@
 						<td><br></td>
 					</tr>
 					<tr>
-						<td><p>Once your situation is processed, we will contact you to set up a meeting.<br>However, if you have any questions or concerns feel free to contact <b>Leigh Andrews at 256-233-2323.</b> Thank you!</p></td>
+						<td><p>Once your situation is processed, we will contact you to set up a meeting.<br>However, if you have any questions or concerns feel free to contact <b>our office at 256-233-2323.</b> Thank you!</p></td>
 					</tr>
 				
 				</table>

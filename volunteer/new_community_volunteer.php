@@ -165,7 +165,7 @@
  				<span class="clear">
 					<label class="description" for="email">Email Address</label>
  					<input name="email" id="email" type="text" size="40" maxlength="40" 
-						class="text email" /> 
+						class="text email required" /> 
 				</span> 
  				<span style="margin-left:10px" id="phone">
 					<label class="description" for="home_phone_header">Home Phone </label>
@@ -182,7 +182,7 @@
 				<span>
 					<label class="description" for="address">Home Address</label>
 					<input name="street_address1" size="87" maxlength="30" type="text"
-						class="text" />
+						class="text required" />
 					<label for="street_address1">Street Address (line 1)</label>
 				</span>
 				<span class="clear">
@@ -202,7 +202,7 @@
 				</span>
 				<span>
 					<input name="zip_code" size="24" maxlength="15" type="text"
-						class="text" />
+						class="text required" />
 					<label for="zip_code">Postal &#47; Zip Code</label>
 				</span>
 			</li>

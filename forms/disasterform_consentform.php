@@ -7,12 +7,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Consent to Disclose Information- United Way of Athens/Limestone County</title>
 
-	<link rel="stylesheet" type="text/css" href="/inc/css/uw.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="/inc/css/print.css" media="print">
-	<link rel="stylesheet" type="text/css" href="/inc/js/jquery/jquery-ui/smoothness/jquery-ui-1.10.3.custom.min.css">
-	<script type="text/javascript" src="/inc/js/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="/inc/js/jquery/query-ui.min.js"></script>
-	<script type="text/javascript" src="/inc/js/jquery/jquery.validate.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../inc/css/uw.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="../inc/css/print.css" media="print">
+	<link rel="stylesheet" type="text/css" href="../inc/js/jquery/jquery-ui/smoothness/jquery-ui-1.10.3.custom.min.css">
+	<script type="text/javascript" src="../inc/js/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="../inc/js/jquery/query-ui.min.js"></script>
+	<script type="text/javascript" src="../inc/js/jquery/jquery.validate.min.js"></script>
 	   
 	
 <script type="text/javascript">
@@ -76,7 +76,7 @@
 
 <body>
 	<div id="wrapper">
-		<div class="banner"><img src="/images/uww-logo_2013.png" alt="United Way Logo" /></div>
+		<div class="banner"><img src="../images/uww-logo_2013.png" alt="United Way Logo" /></div>
 		<div id="menu" align="center">
 			<ul id="mainNav" class="center">
 				<li>
@@ -132,7 +132,7 @@
 					</li>
 					<li class="buttons">
 						<input type="hidden" name="form_disclosure" value="disclosure_agree">
-						<input id="submitForm" class="button_text" type="submit" name="submit" value="Continue"" >
+						<input id="submitForm" class="button_text" type="submit" name="submit" value="Continue" >
 						<input class="button_text" type="button" id="cancel" value="Cancel" onclick="history.go(-1);">	
 					</li>
 					

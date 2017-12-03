@@ -53,7 +53,7 @@
 					</div><br><br>                      			
                 </div></div>  <!-- close css division "sidQuote" -->
 <!-- Main Content Starts Below-->								
-				<div id="content">  <!-- css division "content" -->
+				<div class="content">  <!-- css division "content" -->
 								  <h1>Event Calendar</h1> <!-- Header 1 style -->
 								  <!-- paragraph -->
 								  <p>Check out our calendar for all of our currently scheduled events.

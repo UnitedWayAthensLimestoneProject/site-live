@@ -1,5 +1,4 @@
 <?php
-
 	require_once 'authorize.php';
 	require_once 'database_connection.php';
 
@@ -12,7 +11,7 @@
 	// Displays the html code for <html> through the menu
 	function page_start($title, $javascript = NULL, $bodyId = NULL,
 						$success_message = NULL, $error_message = NULL) {
-		
+
 		$count_records = 0;
 		$count_opp_records = 0;
 		$count_grp_records = 0;
@@ -27,13 +26,12 @@
 					 "SELECT admin_review from damage where admin_review is null or admin_review=0 " .
 					 "UNION ALL " .
 					 "SELECT admin_review from donation where admin_review is null or admin_review=0";
-		
+
 		$count_result = mysql_query($count_sql)
 			or handle_error("an error occurred while searching for volunteers requiring an admin review", mysql_error());
-				
+
 		$count = mysql_num_rows($count_result);
 		$count_records = $count;
-					
 		display_head($title, $javascript, $count);
 		display_body($bodyId, $title, $success_message, $error_message, $count_records, $count_opp_records, $count_grp_records);
 	}
@@ -95,11 +93,7 @@ EOD;
 			<ul id="mainNav" class="center">
 EOD;
 		if (isset($_SESSION['user_id'])) {
-			if (user_in_group($_SESSION['user_id'], "Administrators")) {
-				//echo "<li><a href='register_volunteer.php' id='addVolLink'>Add Volunteer</a></li>\n";
-				//echo "<li><a href='register_group.php' id='addGroupLink'>Add Group</a></li>\n";
-				//echo "<li><a href='skills_search.php' id='searchAllLink'>Skills Search</a></li>\n";
-				//echo "<li><a href='agency_opp.php' id='agencyOppLink'>Agency Opportunity</a></li>\n";
+			if (user_in_group($_SESSION['user_id'], "Administrators")) {				
 				if ($count_records >= 1 || $count_opp_records >= 1 || $count_grp_records >= 1) {
 					echo "<li style='position:relative;border:0;padding:0px;' id='MyBadge'><a href='admin.php' id='adminLink'>Admin</a></li>\n";
 				} else {
@@ -133,65 +127,61 @@ EOD;
 	}
 
 	function display_message($msg, $msg_type) {
-	
-		echo('<script> w2alert("'.$msg.'"); </script>');
-		
-		//echo "			<div id='{$msg_type}' class='{$msg_type}'>\n";
-		//echo "				<p>{$msg}</p>\n";
-		//echo "			</div>\n";
+
+		echo('<script> w2alert("'.$msg.'"); </script>');		
 	}
 
 	function admin_menu() {
-	
-	
+
+
 		if (user_in_group($_SESSION['user_id'], "Administrators")) {
 				// continue
 		} else {
 			exit;
 		}
-		
+
 		$count_records = 0;
 		$count_sql = "SELECT vol_id " .
 					 "  FROM volunteers " .
 					 " WHERE admin_review is null or admin_review = 0";
-		
+
 		$count_result = mysql_query($count_sql)
 			or handle_error("an error occurred while searching for volunteers requiring an admin review", mysql_error());
-						
+
 		$count_records = mysql_num_rows($count_result);
-		
+
 		if ($count_records > 0) {
 			$adminReviewsLinkFormat = 'adminReviewsYesLink';
 		} else {
 			$adminReviewsLinkFormat = 'adminReviewsNoLink';
 		}
-		
+
 		$count_grp_records = 0;
 		$count_grp_sql = "SELECT grp_id " .
 					 "  FROM grp_t " .
 					 " WHERE admin_review is null or admin_review = 0";
-		
+
 		$count_grp_result = mysql_query($count_grp_sql)
 			or handle_error("an error occurred while searching for volunteers requiring an admin review", mysql_error());
-						
+
 		$count_grp_records = mysql_num_rows($count_grp_result);
-		
+
 		if ($count_grp_records > 0) {
 			$adminReviewGroupsLinkFormat = 'adminReviewGroupsYesLink';
 		} else {
 			$adminReviewGroupsLinkFormat = 'adminReviewGroupsNoLink';
 		}
-		
+
 		$count_opp_records = 0;
 		$count_opp_sql = "SELECT opp_id " .
 					 "  FROM opportunity " .
 					 " WHERE admin_review is null or admin_review = 0";
-					 
+
 		$count_opp_result = mysql_query($count_opp_sql)
 			or handle_error("an error occurred while searching for opportunities requiring an admin review", mysql_error());
-			
+
 		$count_opp_records = mysql_num_rows($count_opp_result);
-		
+
 		if ($count_opp_records > 0) {
 			$adminReviewOppsLinkFormat = 'adminReviewOppsYesLink';
 		} else {
@@ -202,12 +192,12 @@ EOD;
 		$count_opp_sql = "SELECT disaster_id " .
 					 "FROM disaster " .
 					 "WHERE admin_review is null or admin_review = 0";
-					 
+
 		$count_opp_result = mysql_query($count_opp_sql)
 			or handle_error("an error occurred while searching for disasters requiring an admin review", mysql_error());
-			
+
 		$count_opp_records = mysql_num_rows($count_opp_result);
-		
+
 		if ($count_opp_records > 0) {
 			$adminReviewDisasterLinkFormat = 'adminReviewDisasterYesLink';
 		} else {
@@ -218,12 +208,12 @@ EOD;
 		$count_opp_sql = "SELECT damage_id " .
 					 "FROM damage " .
 					 "WHERE admin_review is null or admin_review = 0";
-					 
+
 		$count_opp_result = mysql_query($count_opp_sql)
 			or handle_error("an error occurred while searching for damages requiring an admin review", mysql_error());
-			
+
 		$count_opp_records = mysql_num_rows($count_opp_result);
-		
+
 		if ($count_opp_records > 0) {
 			$adminReviewDamageLinkFormat = 'adminReviewDamageYesLink';
 		} else {
@@ -234,53 +224,53 @@ EOD;
 		$count_opp_sql = "SELECT donation_id " .
 					 "FROM donation " .
 					 "WHERE admin_review is null or admin_review = 0";
-					 
+
 		$count_opp_result = mysql_query($count_opp_sql)
 			or handle_error("an error occurred while searching for donations requiring an admin review", mysql_error());
-			
+
 		$count_opp_records = mysql_num_rows($count_opp_result);
-		
+
 		if ($count_opp_records > 0) {
 			$adminReviewDonationLinkFormat = 'adminReviewDonationYesLink';
 		} else {
 			$adminReviewDonationLinkFormat = 'adminReviewDonationNoLink';
 		}
-		
+
 		echo <<<EOD
 	<div id="adminWrapper">
 		<div id="adminMenuSidebar">
-			<ul id="adminNav">
-			<!-- **ASU2016** Removed the Agencies and Opportunites options by request of customer on 6/19/2016 -->
-				<!--
-				<li><a href="admin_agencies.php" id="adminAgenciesLink">Agencies</a></li>
-				<li><a href="admin_opportunities.php" id="adminOpportunitiesLink">Opportunities</a></li>
-				-->
-			<!-- **ASU2016** End edit coded 6/19/2016 -->
+			<ul id="adminNav">						
+				<li><a href="view_event.php" id="adminSkillsLink">Calendar</a></li>
+        <!-- Fall 2017 (Start) -->
+        <li><a href="admin_massEmail.php" id="adminMassEmail">Email</a></li>
+        <li><a href="admin_sidebar.php" id="adminSidebar">Edit Sidebar</a></li>
+				<li><a href="admin_videos.php" id="adminVideos">Edit Videos</a></li>
+        <!-- Fall 2017 (End) -->
 				<li><a href="admin_skills.php" id="adminSkillsLink">Skills</a></li>
 				<li><a href="admin_users.php" id="adminUsersLink">Users</a></li>
+        <!-- **ASU2016** Added Email Volunter on 7/10/2016 -->
+				<li><a href="admin_vols_email.php" id="adminVolsEmailLink">Criteria Email</a></li>
+			<!-- **ASU2016** End edit coded 7/10/2016 -->
 				<li><a href="admin_vols.php" id="adminVolsLink">Volunteers</a></li>
 			<!-- **ASU2016** Added Volunteers by Age on 6/28/2016 -->
 				<li><a href="admin_vols_community.php" id="adminVolsCommunityLink">(V-Community)</a></li>
 				<li><a href="admin_vols_disaster.php" id="adminVolsDisasterLink">(V-Disaster)</a></li>
 				<li><a href="admin_vols_age.php" id="adminVolsAgeLink">(V-Age)</a></li>
 				<li><a href="admin_vols_skills.php" id="adminVolsSkillLink">(V-Skills)</a></li>
-			<!-- **ASU2016** End edit coded 6/28/2016 -->
-			<!-- **ASU2016** Added Email Volunter on 7/10/2016 -->
-				<li><a href="admin_vols_email.php" id="adminVolsEmailLink">Email Vols</a></li>
-			<!-- **ASU2016** End edit coded 7/10/2016 -->
+			<!-- **ASU2016** End edit coded 6/28/2016 -->			
 				<li><a href="admin_groups.php" id="adminGroupsLink">Groups</a></li>
 				<li><a href="admin_disaster.php" id="adminDisasterLink">Disasters</a></li>
 				<li><a href="admin_damage.php" id="adminDamageLink">Damage</a></li>
 				<li><a href="admin_donation.php" id="adminDonationLink">Donations</a></li>
-				<li><a href="admin_reviews_vols.php" id="{$adminReviewsLinkFormat}">New Volunteers</a></li>
+				<li><a href="admin_reviews_vols.php" id="{$adminReviewsLinkFormat}">New Vols</a></li>
 				<li><a href="admin_reviews_groups.php" id="{$adminReviewGroupsLinkFormat}">New Group</a></li>
 				<li><a href="admin_reviews_opps.php" id="{$adminReviewOppsLinkFormat}">New Opps</a></li>
-				<li><a href="admin_reviews_disaster.php" id="{$adminReviewDisasterLinkFormat}">New Disasters</a></li>
+				<li><a href="admin_reviews_disaster.php" id="{$adminReviewDisasterLinkFormat}">New Disaster</a></li>
 				<li><a href="admin_reviews_damage.php" id="{$adminReviewDamageLinkFormat}">New Damage</a></li>
-				<li><a href="admin_reviews_donation.php" id="{$adminReviewDonationLinkFormat}">New Donations</a></li>
-			<!-- **ASU2016 Removed the Emails option by request of customer on 6/18/2016 
+				<li><a href="admin_reviews_donation.php" id="{$adminReviewDonationLinkFormat}">New Donation</a></li>
+			<!-- **ASU2016 Removed the Emails option by request of customer on 6/18/2016
 				<li><a href="admin_emails.php" id="adminEmailsLink">Emails</a></li>
-			-->
+			-->				
 				</ul>
 		</div>
 EOD;

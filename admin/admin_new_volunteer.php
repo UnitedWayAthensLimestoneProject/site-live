@@ -150,7 +150,7 @@ EOD;
 	page_start("Volunteer Registration Form", $javascript, "addvol", $_REQUEST['success_message'], $error_message);
 	admin_menu();
 
-	
+	// Updated Spring 2017 to require First name, Last name, Address, City, State, Home Phone, Email, Emergency Name and Number
 ?>
 		
     <div id="admin_form_container">
@@ -186,7 +186,7 @@ EOD;
 				<span>
 					<label class="description" for="first_name">First Name</label>
 					<input name="first_name" size="26" maxlength="30" type="text" 
-						 />
+						 class="text required" />
 				</span>
 				<span>
 					<label class="description" for="middle_initial">M.I.</label>
@@ -196,7 +196,7 @@ EOD;
 				<span>
 					<label class="description" for="last_name">Last Name</label>
  					<input name="last_name" size="26" maxlength="30" type="text" 
-						 />
+						 class="text required" />
  				</span>
  				<span class="clear">
 					<label class="description" for="dob">Date Of Birth (mm/dd/yyyy)</label>
@@ -210,12 +210,12 @@ EOD;
  				<span class="clear">
 					<label class="description" for="email">Email Address</label>
  					<input name="email" id="email" type="text" size="40" maxlength="40" 
-						class="text email" /> 
+                                               class="text email required" /> 
 				</span> 
  				<span style="margin-left:10px" id="phone">
 					<label class="description" for="home_phone_header">Home Phone </label>
 					<input name="home_phone" id="home_phone" size="15" maxlength="15" type="text" 
-						class="text_phone" />
+						class="text_phone required" />
 				</span>
 				<span style="margin-left:10px" id="phone">
 					<label class="description" for="cell_phone_header">Cell Phone </label>
@@ -227,7 +227,7 @@ EOD;
 				<span>
 					<label class="description" for="address">Home Address</label>
 					<input name="street_address1" size="80" maxlength="30" type="text"
-						class="text" />
+						class="text required" />
 					<label for="street_address1">Street Address (line 1)</label>
 				</span>
 				<span class="clear">
@@ -237,17 +237,17 @@ EOD;
 				</span>
 				<span class="clear">
 					<input name="city" size="45" maxlength="30" type="text"
-						 />
+						 class="text required" />
 					<label for="city">City</label>
 				</span>
 				<span>
 					<input name="state" size="2" maxlength="2" type="text" value="AL"
-						 />
+						 class="text required" />
 					<label for="state">State</label>
 				</span>
 				<span>
 					<input name="zip_code" size="24" maxlength="15" type="text"
-						class="text" />
+						class="text required" />
 					<label for="zip_code">Postal &#47; Zip Code</label>
 				</span>
 			</li>
@@ -333,12 +333,12 @@ EOD;
 							<span>
 								<label class="description" for="emer_first_name">First Name</label>
 								<input name="emer_first_name" size="26" maxlength="30" 
-									type="text"  />
+									type="text" class="text required" />
 							</span>
 							<span style="margin-left:5px">
 								<label class="description" for="emer_last_name">Last Name</label>
 			 					<input name="emer_last_name" size="26" maxlength="30" 
- 									type="text"  />
+ 									type="text" class="text required" />
 		 					</span>
 					 	</td>
 					 </tr>
@@ -353,7 +353,7 @@ EOD;
 								<label class="description" for="emerg_phone_header">Emergency Contact 
 									Phone</label>
 								<input name="emer_phone" id="emer_phone" size="26" maxlength="15" type="text" 
-									 />
+									 class="text phone required"/>
 							</span>
 						</td>
 					</tr>

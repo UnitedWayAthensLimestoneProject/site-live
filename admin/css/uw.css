@@ -1,4 +1,9 @@
-/* css reset */
+/*
+CSS Styles for Admin Pages
+
+admin.php link list style inspired by: https://designshack.net/articles/css/5-simple-and-practical-css-list-styles-you-can-copy-and-paste/
+*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -59,7 +64,7 @@ body {
 }
 
 #wrapper {
-	width: 1000px;
+	width: 90%;  
 	margin-right: auto;
 	margin-left: auto;
   	border-right: 2px solid #0a0d4c;
@@ -82,7 +87,7 @@ body {
 }
 
 #adminWrapper {
-	width: 1000px;
+	width: 100%;
   	background: #0a0d4c;
 	background-image: url(../images/bg_column.jpg);
   	background-repeat: repeat-y;
@@ -174,7 +179,7 @@ div.leftright{
 }
 
 #menu {
-	width: 1000px;
+	width: 100%;
 	margin-right: auto;
 	margin-left: auto;
 	padding: 0;
@@ -186,8 +191,7 @@ div.leftright{
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	overflow: hidden; 
-	zoom: 1;
+	overflow: hidden; 	
 	background-color: #0a0d4c;
 }
 
@@ -201,8 +205,7 @@ div.leftright{
 #mainNav a {
 	color: #000;
 	display: block;
-	background-color: #E7E7E7;
-	zoom: 1;
+	background-color: #E7E7E7;	
 	
 	/***  CSS Box Model  ***/
 	padding:7px 5px;
@@ -261,8 +264,9 @@ div.leftright{
 
 #adminMenuSidebar {
 	float: left;
-	margin: 5px 0 0 0;
-	width: 125px;
+	margin: 5px 10px 0 0;
+	width: 10%;
+  min-width: 90px;
 	display: inline;
 }
 
@@ -270,13 +274,62 @@ div.leftright{
 	display: inline;
 }
 
+.adminDefaults {
+  margin-left: 5%;
+  font-size: 1em;  
+}
+
+#divLinks {
+  width: 60%;
+  margin-left: 15%;
+  max-width:200px;
+}
+
+#h2Links {
+  font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#ulLinks {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#liLinks {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+
+#liLinks:last-child {
+  border: none;
+}
+
+#liLinks a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  width: 100%;
+  
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, backgound-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, backgound-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, backgound-color 0.3s ease;
+  transition: font-size 0.3s ease, backgound-color 0.3s ease;
+}
+
+#liLinks a:hover {
+  font-size: 30px;
+  background: #f6f6f6;
+}
+
 #adminNav {
 	list-style: none;
 	padding: 0;
 	margin: 0 4px;
-	width: 115px;
-	border-bottom: 1px solid #0a0d4c;
-	zoom: 1;
+	width: 100%;
+	border-bottom: 1px solid #0a0d4c;	
 }
 
 #adminNav a {
@@ -295,13 +348,91 @@ div.leftright{
 	border-collapse: collapse;
 	border-bottom: none;
 
-	/***  CSS Text and Font  ***/
+	/***  CSS Text and Font  ***/	
 	
-	font-size: 11px;
+  font-size: .80em;
 	text-align: center;
 	text-transform: uppercase;
 	text-decoration: none;
 }
+
+#admin_form_container
+{
+	background: #fff;
+	float: left;
+	text-align: left;
+	width: 87%;
+	margin-right: auto;
+	min-height: 750px;
+}
+
+@media (max-width:1250px){  
+  #adminNav a {
+    font-size: .75em;
+  }  
+}
+
+@media (max-width: 1200px) {  
+  #adminNav a {
+    font-size: .70em;
+  }  
+}
+
+@media (max-width: 1080px) { 
+  #adminNav a {
+    font-size: .65em;
+  }  
+}
+
+@media (max-width: 900px) {
+  #admin_form_container {
+    width: 85%;
+  }
+}
+
+@media (max-width: 770px) {  
+  #admin_form_container {  
+    width: 80%;
+  } 
+}
+
+@media (max-width: 650px) {
+  .adminDefaults {
+    margin-left: 4%;
+    font-size: .90em; 
+  }
+}
+
+@media (max-width: 580px) {  
+  #admin_form_container {  
+    width: 75%;    
+  }  
+}
+
+@media (max-width: 520px) {  
+  #admin_form_container {  
+    width: 95%;    
+  }
+  
+  #adminMenuSidebar {
+    display: none;
+  }  
+}
+
+@media (max-width: 410px) {
+  .adminDefaults {
+    margin-left: 2%;
+    font-size: .80em; 
+  }
+}
+
+@media (max-width: 330px) {
+  .adminDefaults {
+    margin-left: 0%;
+    font-size: .70em;  
+  }
+}
+
 
 #adminNav a:hover {
 	font-weight: bold;
@@ -354,20 +485,19 @@ div.leftright{
 {
 	background:#fff;
 	text-align:left;
-	width: 775px;
+	width: 70%;
 	margin-right: auto;
 	margin-left: auto;
 	min-height: 600px; 	
 }
 
-#admin_form_container
-{
-	background: #fff;
-	float: left;
-	text-align: left;
-	width: 850px;
-	margin-right: auto;
-	min-height: 600px; 	
+.sideImg {
+  position: relative;  
+  width:  40%;
+  height: 35%;
+  background-repeat:   no-repeat;
+  background-size:     cover;
+  margin-bottom:2%;
 }
 
 #editvoltable
@@ -375,7 +505,7 @@ div.leftright{
 	background: #fff;
 	float: left;
 	text-align: left;
-	width: 850px;
+	width: 85%;
 	margin-right: auto;
 	min-height: 600px; 	
 }
@@ -1043,10 +1173,10 @@ form li:hover .guidelines
 }
 
 .form_success h2 {
-    clear:left;
-    font-size:160%;
-    font-weight:normal;
-    margin:0pt 0pt 3px;
+  clear:left;
+  font-size:160%;
+  font-weight:normal;
+  margin:0pt 0pt 3px;
 }
 
 fieldset {
@@ -1086,9 +1216,9 @@ fieldset br {
 
 /* used for scrolling */
 .scrollit {
-    overflow:scroll;
-    max-height:350px;
-    width:100%;
+  overflow:scroll;
+  max-height:350px;
+  width:100%;
 }
 
 label.user_form {
@@ -1197,3 +1327,87 @@ table.editopptable td {
 	font-size: 14px;
 }
 
+
+#eventTable table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#eventTable th, td {
+  text-align: center;
+  padding: 8px;
+	width: 160px;
+}
+
+#eventTable tr:nth-child(even){background-color: #ffd280}
+.Cal_input
+{
+	display: inline-block;
+  margin: 2px;
+  text-align: center;
+}
+
+#emailResults {
+  margin-left:10px;
+}
+
+.scroll {
+  position:relative;  
+  width: 94%;
+  height: 560px;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+.resizedTextbox  {
+  position:relative;
+  width:93%;  
+  height:30px;
+}
+
+.tb {
+  border-collapse: collapse;
+  border: 1px solid;
+}
+
+#btnAdmin {
+  background: #e6e6e6;
+  margin-left: 0px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 4px 8px 4px 8px;
+}
+
+#btnAdmin:hover {
+  background: #f9b479;
+  font-weight: bold;  
+}
+
+.form-control {
+  width: 40%;  
+  height: 8em;  
+}
+
+.imageButtons {
+  margin-bottom: 10px;
+    
+}
+
+.vidLayout { 
+  margin-bottom: 10px;
+  margin-right: 20%;
+  width: 40%;  
+}
+
+.vidHeading {
+  margin-bottom: 10px;
+}
+
+.vidLine {
+  width: 50%;
+  margin: 0px;
+}
+
+.vidSection {
+  margin-top: 20px;
+}

@@ -1,4 +1,4 @@
-<<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
@@ -8,13 +8,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<link rel="stylesheet" type="text/css" href="/inc/css/uw.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="/inc/css/print.css" media="print">
-	<link rel="stylesheet" type="text/css" href="/inc/js/jquery/jquery-ui/smoothness/jquery-ui-1.10.3.custom.min.css">
-	<script type="text/javascript" src="/inc/js/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="/inc/js/jquery/query-ui.min.js"></script>
-	<script type="text/javascript" src="/inc/js/jquery/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="/inc/js/jquery/jquery.maskedinput.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../inc/css/uw.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="../inc/css/print.css" media="print">
+	<link rel="stylesheet" type="text/css" href="../inc/js/jquery/jquery-ui/smoothness/jquery-ui-1.10.3.custom.min.css">
+	<script type="text/javascript" src="../inc/js/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="../inc/js/jquery/query-ui.min.js"></script>
+	<script type="text/javascript" src="../inc/js/jquery/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="../inc/js/jquery/jquery.maskedinput.min.js"></script>
 
 	<script type= "text/javascript">
 		$(document).ready(function() {
@@ -79,32 +79,32 @@
 </head>
 <body>
 <div id="wrapper">
-		<div class="banner"><img src="/images\uww-logo_2013.png" alt="United Way Logo" /></div>
+		<div class="banner"><img src="../images\uww-logo_2013.png" alt="United Way Logo" /></div>
 		<div id="menu" align="center">
 			<ul id="mainNav" class="center">
 				<li>
 				</li>
 		</ul>
 		</div>
-  <div "="" id="form_container"> <form action="/inc/scripts/add_damage.php" method="GET" id="damage_rport_form" class="appnitro"> 
+  <div  id="form_container"> <form action="../inc/scripts/add_damage.php" method="GET" id="damage_rport_form" class="appnitro"> 
       <div class="form_description"> <h2>Damage Reporting Form</h2> 
         <p>&nbsp;</p> 
       </div> <h3>Household Representative</h3><br /> 
       <ul> 
-        <li style="width: 900px;"> <span> 
+        <li> <span style="width: 100%;"> 
             <label for="first_name" class="description">First Name</label> <input maxlength="30" size="26" name="first_name" class="text required" type="text" /> </span> <span> 
             <label for="middle_initial" class="description">M.I.</label> <input maxlength="1" size="1" name="middle_initial" class="center_text" type="text" /> </span> <span> 
             <label for="last_name" class="description"> Last Name</label> <input maxlength="30" size="26" name="last_name" class="text required" type="text" /> </span> <span style="margin-left: 10px;"> 
             <label for="dob" class="description"> Date Of Birth </label> <input name="dob" id="dob" class="text required" type="date" /> </span> <span class="clear"> 
-            <label for="email" class="description"> Email Address</label> <input maxlength="40" size="40" id="email" name="email" class="text email" type="email" placeholder="email@address.com" /> </span> <span style="margin-left: 10px;"> 
+            <label for="email" class="description"> Email Address</label> <input maxlength="40" size="40" id="email" name="email" class="text email" type="email" placeholder="email@address.com" required/> </span> <span style="margin-left: 10px;"> 
             <label for="home_phone_header" class="description">Home Phone </label> <input maxlength="15" size="15" id="home_phone" name="home_phone" class="text_phone" type="text" placeholder="###-###-####" /> </span> <span style="margin-left: 10px;"> 
             <label for="cell_phone" class="description">Cell Phone </label> <input maxlength="15" size="15" id="cell_phone" name="cell_phone" class="text_phone" type="text" placeholder="###-###-####" /> </span> </li> <br /> 
         <div class="form_description"> 
           <p>&nbsp;</p> 
         </div> <h3>Location of Damaged Area</h3><br /> 
         <li> <span> 
-            <label for="address" class="description"> Address of Damaged Area</label> <input maxlength="30" size="87" name="add_st1" class="text required" type="text" /> 
-            <label for="add_st2"> Street Address (line 1)</label> </span> <span class="clear"> <input maxlength="30" size="87" name="add_st2" class="text " type="text" /> 
+            <label for="address" class="description"> Address of Damaged Area</label> <input maxlength="30" name="add_st1" class="text required" type="text" /> 
+            <label for="add_st2"> Street Address (line 1)</label> </span> <span class="clear"> <input maxlength="30"  name="add_st2" class="text " type="text" /> 
             <label for="add_st2">Street Address (line 2) </label> </span> <span class="clear"> <input maxlength="30" size="25" name="add_city" class="text required" type="text" /> 
             <label for="add_city"> City </label> </span> <span> <input maxlength="2" size="2" name="add_state" class="center_text required" type="text" value="AL" /> 
             <label for="add_state">State</label> </span> <span> <input maxlength="15" size="5" name="add_zip" class="text" type="text" placeholder="#####" /> 
